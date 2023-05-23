@@ -329,8 +329,6 @@
 %}}
 
 % use this for single words, e.g. CV or RESUME etc.
-\colorbox{bgcol}{\makebox[\mpwidth][c]{\HUGE{\textcolor{white}{\uppercase{Florian GUYOT}} } \textcolor{sectcol}{\rule[-1mm]{1mm}{0.9cm}} \HUGE{\textcolor{white}{\uppercase{CV}} } }}
-
 %----------------------------------------------------------------------------------------
 %	HEADER IMAGE
 %----------------------------------------------------------------------------------------
@@ -338,24 +336,22 @@
 
 %\hspace{-1.6cm}
 %\includegraphics[trim= 0 250 0 270,clip,width=1\linewidth+3.1cm]{myfoto.jpg}	%trimming relative to image size!
-\includegraphics[trim= 350 150 0 200, clip ,width=\linewidth]{myfoto.jpg}	%trimming relative to image size
+%\includegraphics[trim= 350 150 0 200, clip ,width=\linewidth]{myfoto.jpg}	%trimming relative to image size
 
 %---------------------------------------------------------------------------------------
 %	SUMMARY
 %----------------------------------------------------------------------------------------
-\transparent{0.85}%
-\vspace{-130pt}
-\hspace{0.4\linewidth}
-\colorbox{bgcol}{
-	\parbox{0.5\linewidth}{
-		\transparent{1}%
-		\begin{center}
-		\larrow{sectcol}\larrow{sectcol}\textcolor{white}{Mon taff est de trouver un p****n de master avant fin mai.}
-		\end{center}
-	}
-}
-\vspace{60pt}
-
+%\transparent{0.85}%
+%\vspace{70pt}
+%\hspace{0.4\linewidth}
+%\colorbox{bgcol}{
+%	\parbox{0.5\linewidth}{
+%		\transparent{1}%
+%		\begin{center}
+%		\larrow{sectcol}\larrow{sectcol}\textcolor{white}{Mon taff est de trouver un p****n de master avant fin mai.}
+%		\end{center}
+%	}
+%}
 %============================================================================%
 %
 %	CV SECTIONS AND EVENTS (MAIN CONTENT)
@@ -365,9 +361,7 @@
 %---------------------------------------------------------------------------------------
 %	STATUS
 %----------------------------------------------------------------------------------------
-\cvsection{Status}
-
-Étudiant en 4ème année à l'EPF, majeure Ingénierie et Numérique
+\centering Étudiant en 4ème année à l'EPF, majeure Ingénierie et Numérique
 
 \vspace{12pt}
 
@@ -377,7 +371,7 @@
 \cvsection{Expérience professionnelle}
 
 %
-\cvevent{09 - 01 / 2023}
+\cvevent{09/2022-01/2023}
 {Stage élève ingénieur}
 {Fraunhofer ISI}
 { Développement du back end du projet MICAT en utilisant :, Pandas Numpy et Flask en Python avec une gestion Git }
@@ -391,7 +385,7 @@
 %\textcolor{softcol}{\hrule}
 
 
-\cvevent{08 / 2021}
+\cvevent{08/2021}
 {Stage engagement citoyen}
 {Zen 2050 Maintenant}
 {Conception et mise en ligne du site web de l’association sous WordPress}
@@ -399,7 +393,7 @@
 %\textcolor{softcol}{\hrule}
 
 %
-\cvevent{03 - 07 / 2021}
+\cvevent{03/2021-07/2021}
 {CDD Assistant technicien}
 {Praxea-Diagnostics}
 {Découpe et préparation des échantillons organiques pour diagnostic médical}
@@ -408,7 +402,7 @@
 
 
 %
-\cvevent{07 / 2019}
+\cvevent{07/2019}
 {Stage ouvrier}
 {GEORGIN}
 {Montage de pièces électroniques sur des cartes{,} (soudures{,} assemblage{,} moulage)., Contrôle qualité du produit final.}
@@ -417,11 +411,11 @@
 %---------------------------------------------------------------------------------------
 %	EDUCATION SECTION
 %--------------------------------------------------------------------------------------
-\cvsection{Formation initiale}
+\cvsection{Projets}
 
-\cvevent{2018 - 2024}
+\cvevent{2018-2024}
 {Ecole d’ingénieur généraliste}
-{EPF de Sceaux }
+{EPF de Cachan }
 {Création d’application mobile en Kotlin,
 Conception d'IA en C/C++/C#/Python (Tensor flow{,} diffusion),
 Sites web en JAVA avec HTML/CSS/JS/PHP/JSP,
@@ -431,14 +425,13 @@ Design de circuits quantiques,
 Modélisation/simulation d’un vérin hydraulique en 3D avec CATIA V5,
 Étude sous MATLAB/COMSOL des flux thermiques dans une ailette de refroidissement,
 Prototype de borne de stationnement en ARDUINO et gestion depuis une page web,
-Programmation d’un Raspberry pour commander une Picar Pro et la contrôler à distance
+Programmation d’un Raspberry pour commander une voiture et la contrôler à distance
 }
 
 \cvevent{2018}
-{Saint Charles}
+{Saint-Charles}
 {Athis-Mons }
-{Baccalauréat Scientifique{,} option Informatique et Science du Numérique
-}
+{Développement d'un jeu d'arène avec "path finding"}
 
 % \textcolor{softcol}{\hrule}
 
@@ -459,6 +452,9 @@ Programmation d’un Raspberry pour commander une Picar Pro et la contrôler à 
 \end{minipage}}%
 \fcolorbox{white}{sectcol}{\begin{minipage}[c][0.95\textheight][t]{0.33\linewidth}
 
+\begin{metasection}{}
+	\icontext{}{}{Florian GUYOT}{white} \\[12pt]
+\end{metasection}
 
 \begin{metasection}{Contact}
 
@@ -477,14 +473,11 @@ Programmation d’un Raspberry pour commander une Picar Pro et la contrôler à 
 
 \begin{metasection}{Compétences}
 
-\icontext{Code}{12}{Developement logiciel}{white}\\
-\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\\[6pt]
+\icontext{Code}{12}{Developement logiciel}{white}\\[6pt]
 
-\icontext{CommentsO}{12}{Consulting}{white}\\
-\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{white}\icon{Star}{12}{white}\icon{Star}{12}{white}\icon{Star}{12}{white}\icon{Star}{12}{white}\\[6pt]
+\icontext{CommentsO}{12}{Consulting}{white}\\[6pt]
 
-\icontext{CodeFork}{12}{Git {\&} Management de projet}{white}\\
-\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{white}\\[6pt]
+\icontext{CodeFork}{12}{Git {\&} Management de projet}{white}\\[6pt]
 
 
 \end{metasection}
