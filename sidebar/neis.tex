@@ -68,7 +68,7 @@
 % more font size definitions
 \usepackage{moresize}
 
-\usepackage{fontawesome}
+%\usepackage{fontawesome}
 
 %----------------------------------------------------------------------------------------
 %	PAGE LAYOUT  DEFINITIONS
@@ -82,7 +82,7 @@
 \usepackage[a4paper]{geometry}
 
 % for example, change the margins to 2 inches all round
-\geometry{top=.8cm, bottom=-1.7cm, left=0.2cm, right=1cm}
+\geometry{top=1cm, bottom=-.6cm, left=0.4cm, right=1cm}
 
 
 %less space between header and content
@@ -151,7 +151,6 @@
 
 %Package for links, must be the last package used
 \usepackage[hidelinks]{hyperref}
-\usepackage{amstex}
 
 %============================================================================%
 %
@@ -216,8 +215,8 @@
     \begin{center}
         \textcolor{white}{\large{\uppercase{#1}}}\\
         \normalsize
-        \parbox{0.7\mpwidth}{\textcolor{white}    \hrule}}{
-    \end{center}}
+        \parbox{0.7\mpwidth}{\textcolor{white}	\hrule}
+        }{\end{center}}
 
 %----------------------------------------------------------------------------------------
 %	 CV EVENT
@@ -234,7 +233,7 @@
 {
     \vspace{6pt}
     \begin{tabular*}{1\mpwidth}{p{0.55\mpwidth}  x{0.42\mpwidth}}
-        \textcolor{black}{\textbf{#2}} & \textcolor{black}{#3}, \textcolor{black}{#1}
+        \textcolor{black}{\textbf{#2}} & \textcolor{complcol}{#3}, \textcolor{bgcol}{#1}
     \end{tabular*}
     \vspace{0pt}
     \textcolor{softcol}{\hrule}
@@ -249,9 +248,9 @@
     \foreach \listitem in {#1}
         {
         \begin{tabular*}
-        {1\mpwidth}{p{1\mpwidth}}
+        {1\mpwidth}{p{1.2\mpwidth}}
             \parbox{1\mpwidth}{\larrow{softcol} \listitem}
-            \vspace{6pt}
+            \vspace{3pt}
         \end{tabular*}
     }
 }
@@ -267,6 +266,12 @@
 % CUSTOM STRUT FOR EMPTY BOXES
 %----------------------------------------- -----------------------------------------------
 \newcommand{\mystrut}{\rule[-.3\baselineskip]{0pt}{\baselineskip}}
+
+%----------------------------------------------------------------------------------------
+% CUSTOM LOREM IPSUM
+%----------------------------------------------------------------------------------------
+\newcommand{\lorem}
+{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus.}
 
 
 % use to vertically center content
@@ -287,18 +292,20 @@
 % at this point we simplify our icon-embedding by simply referring to a set of png images.
 % if you find a good way of including svg without conflicting with other packages you can
 % replace this part
-\newcommand{\icon}[3]{\makebox(#2, #2){\textcolor{#3}{\csname fa#1\endcsname}}}    %icon shortcut
-\newcommand{\icontext}[4]{                        %icon with text shortcut
+\newcommand{\icon}[3]{\makebox(#2, #2){\textcolor{#3}{\csname fa#1\endcsname}}}	%icon shortcut
+\newcommand{\icontext}[4]{ 						%icon with text shortcut
     \vcenteredhbox{\icon{#1}{#2}{#4}} \vcenteredhbox{\textcolor{#4}{#3}}
 }
-\newcommand{\iconhref}[5]{                        %icon with website url
+\newcommand{\iconhref}[5]{ 						%icon with website url
     \vcenteredhbox{\icon{#1}{#2}{#5}} \href{#4}{\textcolor{#5}{#3}}
 }
 
-\newcommand{\iconemail}[5]{                        %icon with email link
+\newcommand{\iconemail}[5]{ 						%icon with email link
     \vcenteredhbox{\icon{#1}{#2}{#5}} \href{mailto:#4}{\textcolor{#5}{#3}}
 }
 
+\newcommand{\Driving}[1]{\infofield{\faCar}{#1}}
+\usepackage{fontawesome5}
 
 %============================================================================%
 %
@@ -311,99 +318,108 @@
 %============================================================================%
 \begin{document}
 
-\fcolorbox{white}{sectcol}{\begin{minipage}[c] [0.95\textheight][t]{0.27\linewidth}
-\vspace{30pt}
-\begin{metasection}{Florian GUYOT}
-\end{metasection}
+    \fcolorbox{white}{sectcol}{\begin{minipage}[c][0.95\textheight][t]{0.33\linewidth}
+
+    \begin{metasection}{}
+        \icontext{}{}{Florian GUYOT}{white} \\[12pt]
+    \end{metasection}
+
+    \begin{metasection}{Contact}
+
+        \icontext{MapMarker}{12}{92160 Antony}{white}\\[6pt]
+        \icontext{MobilePhone}{12}{06 51 21 25 01}{white}\\[6pt]
+        \iconemail{Send}{12}{axelflorian@free.fr}{}{white}\\[6pt]
+        %%\iconhref{MousePointer}{12}{http://jankuester.com/}{www.jankuester.com}{white}\\[6pt]
+        \iconhref{Github}{12}{https://github.com/florianguyot91}{}{white}\\[6pt]
+        %\iconhref{Twitter}{12}{@Kuester\_Jan}{https://twitter.com/kuester_jan?lang=en}{white}\\[6pt]
 
 
-\begin{metasection}{Contact}
 
-    \icontext{MapMarker}{12}{92160 Antony}{white}\\[6pt]
-    \icontext{MobilePhone}{12}{06 51 21 25 01}{white}\\[6pt]
-    \iconemail{Send}{12}{axelflorian@free.fr}{}{white}\\[6pt]
-    %%\iconhref{MousePointer}{12}{http://jankuester.com/}{www.jankuester.com}{white}\\[6pt]
-    \iconhref{Github}{12}{https://github.com/florianguyot91}{}{white}\\[6pt]
-    %\iconhref{Twitter}{12}{@Kuester\_Jan}{https://twitter.com/kuester_jan?lang=en}{white}\\[6pt]
 
-\end{metasection}
+    \end{metasection}
 
 %----------------------------------------------------------------------------------------
 %	META SECTION
 %----------------------------------------------------------------------------------------
 
-\begin{metasection}{Compétences}
+    \begin{metasection}{Compétences}
 
-    \icontext{}{12}{Prise d'initiative et leadership}{white}\\[6pt]
+        \icontext{Code}{12}{Developement logiciel}{white}\\[6pt]
 
-    \icontext{}{12}{Curiosité et ouverture}{white}\\[6pt]
+        \icontext{CommentsO}{12}{Consulting}{white}\\[6pt]
 
-    \icontext{}{12}{Esprit d'analyse}{white}\\[6pt]
+%\icontext{CodeFork}{12}{Git {\&} Management de projet}{white}\\[6pt]
 
+        \textcolor{white}{\faGit} \textcolor{white}{Management de projet} \\[6pt]
 
-\end{metasection}
+        \textcolor{white}{\faPython} \textcolor{white}{text in color} \\[6pt]
 
-
-\begin{metasection}{Langues}
-
-    \textcolor{white}{
-        \icontext{}{}{Anglais C1}{white} \\[6pt]
-        \icontext{}{}{Espagnol B1}{white} \\[6pt]
-        \icontext{}{}{Japonais A2}{white} \\[6pt]
-    }
-\end{metasection}
+    \end{metasection}
 
 
-\begin{metasection}{Technologies}
+    \begin{metasection}{Langues}
 
-    \textcolor{white}{
-        \icontext{}{12}{Intelligence Artificielle}{white} \\[6pt]
-        \icontext{}{12}{Informatique quantique}{white} \\[6pt]
-        \icontext{}{12}{UNIX/Linux}{white} \\[6pt]
-        \icontext{}{12}{Git}{white} \\[6pt]
-    }
-\end{metasection}
+        \textcolor{white}{
+            \icontext{}{}{Anglais C1}{white} \\[6pt]
+            \icontext{}{}{Espagnol B1}{white} \\[6pt]
+            \icontext{}{}{Japonais A2}{white} \\[6pt]
+        }
+    \end{metasection}
 
-\begin{metasection}{Logiciels}
 
-    \textcolor{white}{
-        \icontext{}{12}{JetBrains IDE's}{white}\\[6pt]
-        \icontext{}{12}{VSCode}{white}\\[6pt]
-        \icontext{}{12}{MATLAB}{white}\\[6pt]
-        \icontext{}{12}{CATIA V5}{white}\\[6pt]
-        \icontext{}{12}{IBM Quantum}{white}\\[6pt]
-    }
-\end{metasection}
+    \begin{metasection}{Technologies}
 
-\begin{metasection}{Activitées}
+        \textcolor{white}{
+            \icontext{Code}{12}{Web Design}{white} \\[6pt]
+            \icontext{Terminal}{12}{App design}{white} \\[6pt]
+            \icontext{Fire}{12}{Blaze}{white} \\[6pt]
+            \icontext{Database}{12}{Base de données}{white} \\[6pt]
+            \icontext{CodeFork}{12}{Git}{white} \\[6pt]
+        }
+    \end{metasection}
 
-    \textcolor{white}{
-    \icontext{}{12}{Conception 3D}{white}\\[6pt]
-    \icontext{}{12}{Montage vidéo}{white}\\[6pt]
-    \icontext{}{12}{Guitare}{white}\\[6pt]
-    \icontext{}{12}{Piono}{white}\\[6pt]
-    \icontext{}{12}{Plongée}{white}\\[6pt]
-    }
-\end{metasection}
+    \begin{metasection}{Outils}
+
+        \textcolor{white}{
+            \icontext{Code}{12}{JetBrains IDE's}{white}
+            \icontext{CodeFork}{12}{TortoiseGit}{white}\\[6pt]
+            \icontext{Terminal}{12}{Terminal}{white}
+            \icontext{PaintBrush}{12}{Inkscape}{white}\icontext{Cube}{12}{Blender}{white}
+        }
+    \end{metasection}
+
+    \begin{metasection}{OS}
+
+        \textcolor{white}{\LARGE{
+            \icon{Linux}{24}{white}
+            %\icon{Apple}{24}{white}
+            \icon{Windows}{24}{white}}}
+
+    \end{metasection}
+
+    \begin{metasection}{Activitées}
+
+        \textcolor{white}{\LARGE{\icon{Gamepad}{24}{white} \icon{Headphones}{24}{white}  \icon{Bicycle}{24}{white}}}
+    \end{metasection}
 
 
 %---------------------------------------------------------------------------------------
 %	QR CODE (optional)
 %----------------------------------------------------------------------------------------
 
-\vspace{12pt}
+    \vspace{12pt}
 %\begin{center}
 %\includegraphics[width=0.35\mpwidth]{qrcode}
 %\end{center}
 
-                                 \end{minipage}}
-\fcolorbox{white}{white}{\begin{minipage}[c][0.95\textheight][t]{0.69\linewidth}
+    \end{minipage}}
+    \fcolorbox{white}{white}{\begin{minipage}[c][0.95\textheight][t]{0.69\linewidth}
 
 
 %---------------------------------------------------------------------------------------
 %	TITLE HEADLINE
 %----------------------------------------------------------------------------------------
-                                 \vspace{10pt}
+    \vspace{-3pt}
 % use this for multiple words like working titles etc.
 %\hspace{-0.25\linewidth}\colorbox{bgcol}{\makebox[1.5\linewidth][c]{\hspace{46pt}\HUGE{\textcolor{white}{\uppercase{M.Sc. Jan Küster}} } \textcolor{sectcol}{\rule[-1mm]{1mm}{0.9cm}} \parbox[b]{5cm}{   \large{ \textcolor{white}{{IT Consultant}}}\\
 % \large{ \textcolor{white}{{JS Fullstack Engineer}}}}
@@ -442,24 +458,20 @@
 %---------------------------------------------------------------------------------------
 %	STATUS
 %----------------------------------------------------------------------------------------
-                                 \centering ÉTUDIANT EN 4 ÈME ANNÉE A L'EPF, MAJEURE INGÉNIERIE ET NUMÉRIQUE
+    \centering Étudiant en 4ème année à l'EPF, majeure Ingénierie et Numérique
 
-                                 \vspace{12pt}
+    \vspace{12pt}
 
 %---------------------------------------------------------------------------------------
 %	EXPERIENCE
 %----------------------------------------------------------------------------------------
-                                 \cvsection{Expérience professionnelle}
+    \cvsection{Expérience professionnelle}
 
 %
-                                 \cvevent{09/2022-01/2023}
-                                 {Stage élève ingénieur}
-                                 {Fraunhofer ISI}
-                                 { Développement du back end du projet MICAT :,
-                                     Pandas pour la gestion de dataframe et de lecture de JSON,
-                                     Numpy pour les opérations économique,
-                                     Flask pour la communication entre le back te le front end,
-                                     Collaboration avec Git }
+    \cvevent{09/2022-01/2023}
+    {Stage élève ingénieur}
+    {Fraunhofer ISI}
+    { Développement du back end du projet MICAT en utilisant :, Pandas Numpy et Flask en Python avec une gestion Git }
 
 %\textcolor{softcol}{\hrule}
 
@@ -470,57 +482,53 @@
 %\textcolor{softcol}{\hrule}
 
 
-                                 \cvevent{08/2021}
-                                 {Stage engagement citoyen}
-                                 {Zen 2050 Maintenant}
-                                 {Conception sous WordPress et mise en ligne du site web de l’association }
+    \cvevent{08/2021}
+    {Stage engagement citoyen}
+    {Zen 2050 Maintenant}
+    {Conception et mise en ligne du site web de l’association sous WordPress}
 
 %\textcolor{softcol}{\hrule}
 
 %
-                                 \cvevent{03/2021-07/2021}
-                                 {CDD Assistant technicien}
-                                 {Praxea-Diagnostics}
-                                 {Découpe et préparation des échantillons organiques pour diagnostic médical}
+    \cvevent{03/2021-07/2021}
+    {CDD Assistant technicien}
+    {Praxea-Diagnostics}
+    {Découpe et préparation des échantillons organiques pour diagnostic médical}
 
 %\textcolor{softcol}{\hrule}
 
 
 %
-                                 \cvevent{07/2019}
-                                 {Stage ouvrier}
-                                 {GEORGIN}
-                                 {Montage de composants électroniques sur des cartes{,} (soudures{,} assemblage{,} moulage)., Contrôle qualité du produit final.}
+    \cvevent{07/2019}
+    {Stage ouvrier}
+    {GEORGIN}
+    {Montage de pièces électroniques sur des cartes{,} (soudures{,} assemblage{,} moulage)., Contrôle qualité du produit final.}
 
-                                 \vspace{12pt}
+    \vspace{12pt}
 %---------------------------------------------------------------------------------------
 %	EDUCATION SECTION
 %--------------------------------------------------------------------------------------
-                                 \cvsection{Projets}
+    \cvsection{Projets}
 
-                                 \cvevent{2018-2024}
-                                 {Ecole d’ingénieur généraliste}
-                                 {EPF de Cachan }
-                                 {Développement d'une application mobile pour rechercher les films les plus populaires{,}
-                                     de créer un compte pour les mettre en favoris et scanner des QRcodes pour accéder aux détails d'un film
-                                     en Kotlin depuis l'API The Movie Database,
-                                     Conception d'une IA pour génerer des maps dans un jeu de rythme (Osu!) en Python (Tensorflow keras),
-                                     Création d'un site en JAVA de gestion d'une base client{,} d'une flotte de voitures{,} et de réservations,
-                                     Développement d'un site web en JS/PHP de prises de rendez-vous et de gestion de clients d'un cabinet médical,
-                                     Création d’une application web d'un jeu de mémoire (front end{,} back end),
-                                     Gestion de bases de données en SQL avec UML,
-                                     Design de circuits quantiques (Addition{,} ect),
-                                     Approximations d'intégrales sous MATLAB,
-                                     Modélisation et simulation de contraintes d’un vérin hydraulique en 3D avec CATIA V5,
-                                     Analyse comparée des flux thermiques dans une ailette de refroidissement{,} entre un modèle physique et MATLAB/COMSOL,
-                                     Création d'un prototype de borne de stationnement de voitures en ARDUINO et gestion d'autorisation depuis une page web,
-                                     Programmation d’un Raspberry pour commander une voiture et la contrôler à distance
-                                 }
+    \cvevent{2018-2024}
+    {Ecole d’ingénieur généraliste}
+    {EPF de Cachan }
+    {Création d’application mobile en Kotlin,
+        Conception d'IA en C/C++/C#/Python (Tensor flow{,} diffusion),
+        Sites web en JAVA avec HTML/CSS/JS/PHP/JSP,
+        Création d’une application web (front end{,} back end),
+        Gestion de bases de données en SQL avec UML,
+        Design de circuits quantiques,
+        Modélisation/simulation d’un vérin hydraulique en 3D avec CATIA V5,
+        Étude sous MATLAB/COMSOL des flux thermiques dans une ailette de refroidissement,
+        Prototype de borne de stationnement en ARDUINO et gestion depuis une page web,
+        Programmation d’un Raspberry pour commander une voiture et la contrôler à distance
+    }
 
-                                 \cvevent{2018}
-                                 {Saint-Charles}
-                                 {Athis-Mons }
-                                 {Développement d'un jeu d'arène avec "path finding"}
+    \cvevent{2018}
+    {Saint-Charles}
+    {Athis-Mons }
+    {Développement d'un jeu d'arène avec "path finding"}
 
 % \textcolor{softcol}{\hrule}
 
