@@ -219,6 +219,14 @@
         \parbox{0.7\mpwidth}{\textcolor{white}    \hrule}}{
     \end{center}}
 
+\newenvironment{metasection_title}[1] {
+    \vspace{6pt}
+    \begin{center}
+        \textcolor{white}{\large{\uppercase{#1}}}\\
+        \normalsize
+        \parbox{0.7\mpwidth}{\textcolor{white}}}{
+    \end{center}}
+
 %----------------------------------------------------------------------------------------
 %	 CV EVENT
 %----------------------------------------------------------------------------------------
@@ -313,18 +321,17 @@
 
 \fcolorbox{white}{sectcol}{\begin{minipage}[c] [0.95\textheight][t]{0.27\linewidth}
 \vspace{30pt}
-\begin{metasection}{Florian GUYOT}
-\end{metasection}
+\begin{metasection_title}
+{Florian GUYOT}
+\end{metasection_title}
 
 
 \begin{metasection}{Contact}
 
     \icontext{MapMarker}{12}{92160 Antony}{white}\\[6pt]
     \icontext{MobilePhone}{12}{06 51 21 25 01}{white}\\[6pt]
-    \iconemail{Send}{12}{axelflorian@free.fr}{}{white}\\[6pt]
-    %%\iconhref{MousePointer}{12}{http://jankuester.com/}{www.jankuester.com}{white}\\[6pt]
-    \iconhref{Github}{12}{https://github.com/florianguyot91}{}{white}\\[6pt]
-    %\iconhref{Twitter}{12}{@Kuester\_Jan}{https://twitter.com/kuester_jan?lang=en}{white}\\[6pt]
+    \iconemail{Send}{12}{axelflorian@free.fr}{axelflorian@free.fr}{white}\\[6pt]
+    \iconhref{Github}{12}{https://github.com/florianguyot91}{https://github.com/florianguyot91}{white}\\[6pt]
 
 \end{metasection}
 
@@ -375,7 +382,7 @@
     }
 \end{metasection}
 
-\begin{metasection}{Activitées}
+\begin{metasection}{Activités}
 
     \textcolor{white}{
     \icontext{}{12}{Conception 3D}{white}\\[6pt]
@@ -455,11 +462,12 @@
                                  \cvevent{09/2022-01/2023}
                                  {Stage élève ingénieur}
                                  {Fraunhofer ISI}
-                                 { Développement du back end du projet MICAT :,
+                                 { Développement du back end d'une application web mandétée par la commission eurompéene en colaboration avec différents instituts (MICAT) :,
                                      Pandas pour la gestion de dataframe et de lecture de JSON,
-                                     Numpy pour les opérations économique,
-                                     Flask pour la communication entre le back te le front end,
-                                     Collaboration avec Git }
+                                     Numpy pour les opérations économiques,
+                                     Flask pour la communication entre le back et le front end,
+                                     Collaboration avec Git
+                                 }
 
 %\textcolor{softcol}{\hrule}
 
