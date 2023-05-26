@@ -82,7 +82,7 @@
 \usepackage[a4paper]{geometry}
 
 % for example, change the margins to 2 inches all round
-\geometry{top=.8cm, bottom=-1.7cm, left=0.2cm, right=1cm}
+\geometry{top=.8cm, bottom=-1.7cm, left=0.2cm, right=0.2cm}
 
 
 %less space between header and content
@@ -222,9 +222,10 @@
 \newenvironment{metasection_title}[1] {
     \vspace{6pt}
     \begin{center}
-        \textcolor{white}{\large{\uppercase{#1}}}\\
+        \linespread{2}{
+    \selectfont\textcolor{white}{\fontsize{25}{25}{\uppercase{#1}}}\\
         \normalsize
-        \parbox{0.7\mpwidth}{\textcolor{white}}}{
+        \parbox{0.7\mpwidth}{\textcolor{white}}}}{
     \end{center}}
 
 %----------------------------------------------------------------------------------------
@@ -240,9 +241,9 @@
 %
 \newcommand{\cvevent}[4]
 {
-    \vspace{6pt}
+    \vspace{10pt}
     \begin{tabular*}{1\mpwidth}{p{0.55\mpwidth}  x{0.42\mpwidth}}
-        \textcolor{black}{\textbf{#2}} & \textcolor{black}{#3}, \textcolor{black}{#1}
+        \textcolor{black}{\normalsize\textbf{#2}} & \textbf{\normalsize\textcolor{black}{#3}}, \textcolor{black}{#1}
     \end{tabular*}
     \vspace{0pt}
     \textcolor{softcol}{\hrule}
@@ -322,7 +323,7 @@
 \fcolorbox{white}{sectcol}{\begin{minipage}[c] [0.95\textheight][t]{0.27\linewidth}
 \vspace{30pt}
 \begin{metasection_title}
-{Florian GUYOT}
+{\bfseries Florian GUYOT}
 \end{metasection_title}
 
 
@@ -341,11 +342,9 @@
 
 \begin{metasection}{Compétences}
 
-    \icontext{}{12}{Prise d'initiative et leadership}{white}\\[6pt]
-
-    \icontext{}{12}{Curiosité et ouverture}{white}\\[6pt]
-
-    \icontext{}{12}{Esprit d'analyse}{white}\\[6pt]
+    \icontext{}{-12}{Prise d'initiative et leadership}{white}\\[6pt]
+    \icontext{}{-12}{Curiosité et ouverture}{white}\\[6pt]
+    \icontext{}{-12}{Esprit d'analyse}{white}\\[6pt]
 
 
 \end{metasection}
@@ -354,9 +353,9 @@
 \begin{metasection}{Langues}
 
     \textcolor{white}{
-        \icontext{}{}{Anglais C1}{white} \\[6pt]
-        \icontext{}{}{Espagnol B1}{white} \\[6pt]
-        \icontext{}{}{Japonais A2}{white} \\[6pt]
+        \icontext{}{-12}{Anglais C1}{white} \\[6pt]
+        \icontext{}{-12}{Espagnol B1}{white} \\[6pt]
+        \icontext{}{-12}{Japonais A2}{white} \\[6pt]
     }
 \end{metasection}
 
@@ -364,32 +363,32 @@
 \begin{metasection}{Technologies}
 
     \textcolor{white}{
-        \icontext{}{12}{Intelligence Artificielle}{white} \\[6pt]
-        \icontext{}{12}{Informatique quantique}{white} \\[6pt]
-        \icontext{}{12}{UNIX/Linux}{white} \\[6pt]
-        \icontext{}{12}{Git}{white} \\[6pt]
+        \icontext{}{-12}{Intelligence Artificielle}{white} \\[6pt]
+        \icontext{}{-12}{Informatique quantique}{white} \\[6pt]
+        \icontext{}{-12}{UNIX/Linux}{white} \\[6pt]
+        \icontext{}{-12}{Git}{white} \\[6pt]
     }
 \end{metasection}
 
 \begin{metasection}{Logiciels}
 
     \textcolor{white}{
-        \icontext{}{12}{JetBrains IDE's}{white}\\[6pt]
-        \icontext{}{12}{VSCode}{white}\\[6pt]
-        \icontext{}{12}{MATLAB}{white}\\[6pt]
-        \icontext{}{12}{CATIA V5}{white}\\[6pt]
-        \icontext{}{12}{IBM Quantum}{white}\\[6pt]
+        \icontext{}{-12}{JetBrains IDE's}{white}\\[6pt]
+        \icontext{}{-12}{VSCode}{white}\\[6pt]
+        \icontext{}{-12}{MATLAB}{white}\\[6pt]
+        \icontext{}{-12}{CATIA V5}{white}\\[6pt]
+        \icontext{}{-12}{IBM Quantum}{white}\\[6pt]
     }
 \end{metasection}
 
 \begin{metasection}{Activités}
 
     \textcolor{white}{
-    \icontext{}{12}{Conception 3D}{white}\\[6pt]
-    \icontext{}{12}{Montage vidéo}{white}\\[6pt]
-    \icontext{}{12}{Guitare}{white}\\[6pt]
-    \icontext{}{12}{Piono}{white}\\[6pt]
-    \icontext{}{12}{Plongée}{white}\\[6pt]
+    \icontext{}{-12}{Conception 3D}{white}\\[6pt]
+    \icontext{}{-12}{Montage vidéo}{white}\\[6pt]
+    \icontext{}{-12}{Guitare}{white}\\[6pt]
+    \icontext{}{-12}{Piano}{white}\\[6pt]
+    \icontext{}{-12}{Plongée}{white}\\[6pt]
     }
 \end{metasection}
 
@@ -410,7 +409,6 @@
 %---------------------------------------------------------------------------------------
 %	TITLE HEADLINE
 %----------------------------------------------------------------------------------------
-                                 \vspace{10pt}
 % use this for multiple words like working titles etc.
 %\hspace{-0.25\linewidth}\colorbox{bgcol}{\makebox[1.5\linewidth][c]{\hspace{46pt}\HUGE{\textcolor{white}{\uppercase{M.Sc. Jan Küster}} } \textcolor{sectcol}{\rule[-1mm]{1mm}{0.9cm}} \parbox[b]{5cm}{   \large{ \textcolor{white}{{IT Consultant}}}\\
 % \large{ \textcolor{white}{{JS Fullstack Engineer}}}}
@@ -449,9 +447,15 @@
 %---------------------------------------------------------------------------------------
 %	STATUS
 %----------------------------------------------------------------------------------------
-                                 \centering ÉTUDIANT EN 4 ÈME ANNÉE A L'EPF, MAJEURE INGÉNIERIE ET NUMÉRIQUE
+\vspace{20pt}
+\fontsize{15}{15}
+\centering{\bfseries ÉTUDIANT EN 4 ÈME ANNÉE A L'EPF
 
-                                 \vspace{12pt}
+
+MAJEURE INGÉNIERIE ET NUMÉRIQUE
+}
+
+                                 \vspace{25pt}
 
 %---------------------------------------------------------------------------------------
 %	EXPERIENCE
@@ -462,11 +466,15 @@
                                  \cvevent{09/2022-01/2023}
                                  {Stage élève ingénieur}
                                  {Fraunhofer ISI}
-                                 { Développement du back end d'une application web mandétée par la commission eurompéene en colaboration avec différents instituts (MICAT) :,
-                                     Pandas pour la gestion de dataframe et de lecture de JSON,
-                                     Numpy pour les opérations économiques,
-                                     Flask pour la communication entre le back et le front end,
-                                     Collaboration avec Git
+                                 { Développement du back end d'une application web mandatée par la Commission Européenne \newline\hspace*{4mm}en colaboration avec différents instituts (MICAT) :
+                                 \newline
+                                 \hspace*{4mm}- Pandas pour la gestion de dataframe et de lecture de JSON
+                                 \newline
+                                 \hspace*{4mm}- Numpy pour les opérations économiques
+                                 \newline
+                                 \hspace*{4mm}- Flask pour la communication entre le back et le front end
+                                 \newline
+                                 \hspace*{4mm}- Collaboration avec Git
                                  }
 
 %\textcolor{softcol}{\hrule}
@@ -489,7 +497,7 @@
                                  \cvevent{03/2021-07/2021}
                                  {CDD Assistant technicien}
                                  {Praxea-Diagnostics}
-                                 {Découpe et préparation des échantillons organiques pour diagnostic médical}
+                                 {Découpe et préparation d'échantillons organiques pour le diagnostic médical}
 
 %\textcolor{softcol}{\hrule}
 
@@ -498,9 +506,9 @@
                                  \cvevent{07/2019}
                                  {Stage ouvrier}
                                  {GEORGIN}
-                                 {Montage de composants électroniques sur des cartes{,} (soudures{,} assemblage{,} moulage)., Contrôle qualité du produit final.}
+                                 {Montage de composants électroniques sur des cartes{,} (soudures{,} assemblage{,} moulage), Contrôle qualité du produit final}
 
-                                 \vspace{12pt}
+                                    \vspace{25pt}
 %---------------------------------------------------------------------------------------
 %	EDUCATION SECTION
 %--------------------------------------------------------------------------------------
@@ -508,26 +516,30 @@
 
                                  \cvevent{2018-2024}
                                  {Ecole d’ingénieur généraliste}
-                                 {EPF de Cachan }
-                                 {Développement d'une application mobile pour rechercher les films les plus populaires{,}
-                                     de créer un compte pour les mettre en favoris et scanner des QRcodes pour accéder aux détails d'un film
-                                     en Kotlin depuis l'API The Movie Database,
-                                     Conception d'une IA pour génerer des maps dans un jeu de rythme (Osu!) en Python (Tensorflow keras),
-                                     Création d'un site en JAVA de gestion d'une base client{,} d'une flotte de voitures{,} et de réservations,
-                                     Développement d'un site web en JS/PHP de prises de rendez-vous et de gestion de clients d'un cabinet médical,
+                                 {EPF de Cachan}
+                                 {Développement d'une application mobile en Kotlin depuis l'API The Movie Database pour :
+                                     \newline
+                                     \hspace*{4mm}- Rechercher les films les plus populaires
+                                     \newline
+                                     \hspace*{4mm}- Créer un compte pour les mettre en favoris
+                                     \newline
+                                     \hspace*{4mm}- Scanner des QRcodes pour accéder aux détails d'un film,
+                                     Conception d'une IA en Python (Tensorflow keras) pour génerer des maps dans un jeu de \hspace*{4mm}rythme (Osu!),
+                                     Création d'un site en JAVA de gestion d'une flotte de voitures associée à une base clients \hspace*{4mm} et réservations,
+                                     Développement d'un site web en JS/PHP de prise de rendez-vous et gestion clients d'un \hspace*{4mm} cabinet médical,
                                      Création d’une application web d'un jeu de mémoire (front end{,} back end),
                                      Gestion de bases de données en SQL avec UML,
                                      Design de circuits quantiques (Addition{,} ect),
                                      Approximations d'intégrales sous MATLAB,
                                      Modélisation et simulation de contraintes d’un vérin hydraulique en 3D avec CATIA V5,
-                                     Analyse comparée des flux thermiques dans une ailette de refroidissement{,} entre un modèle physique et MATLAB/COMSOL,
-                                     Création d'un prototype de borne de stationnement de voitures en ARDUINO et gestion d'autorisation depuis une page web,
+                                     Analyse comparée des flux thermiques dans une ailette de refroidissement{,} entre un modèle \hspace*{4mm}physique et une simulation sous MATLAB/COMSOL,
+                                     Création d'un prototype de borne de stationnement de voitures en ARDUINO et gestion \hspace*{4mm} d'autorisation depuis une page web,
                                      Programmation d’un Raspberry pour commander une voiture et la contrôler à distance
                                  }
 
                                  \cvevent{2018}
                                  {Saint-Charles}
-                                 {Athis-Mons }
+                                 {Athis-Mons}
                                  {Développement d'un jeu d'arène avec "path finding"}
 
 % \textcolor{softcol}{\hrule}
