@@ -9,7 +9,7 @@
 %	to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
 %	copies of the Software, and to permit persons to whom the Software is
 %	furnished to do so, subject to the following conditions:
-%
+%	
 %	THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 %	IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
 %	FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
@@ -17,7 +17,7 @@
 %	LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 %	OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 %	THE SOFTWARE.
-%
+%	
 %
 %-----------------------------------------------------------------------------------------------------------------------------------------------%
 
@@ -59,7 +59,7 @@
 % \usepackage{fetamont}
 \usepackage[default]{gillius}
 % \usepackage[light,math]{iwona}
-% \usepackage[thin]{roboto}
+% \usepackage[thin]{roboto} 
 
 % set font default
 \renewcommand*\familydefault{\sfdefault}
@@ -75,7 +75,7 @@
 %----------------------------------------------------------------------------------------
 
 %debug page outer frames
-%\usepackage{showframe}
+%\usepackage{showframe}			
 
 
 %define page styles using geometry
@@ -100,7 +100,7 @@
 
 %----------------------------------------------------------------------------------------
 %	TABLE /ARRAY DEFINITIONS
-%----------------------------------------------------------------------------------------
+%---------------------------------------------------------------------------------------- 
 
 %for layouting tables
 \usepackage{multicol}
@@ -115,7 +115,7 @@
 
 %----------------------------------------------------------------------------------------
 %	GRAPHICS DEFINITIONS
-%----------------------------------------------------------------------------------------
+%---------------------------------------------------------------------------------------- 
 
 %for header image
 \usepackage{graphicx}
@@ -123,17 +123,17 @@
 %for floating figures
 \usepackage{wrapfig}
 \usepackage{float}
-%\floatstyle{boxed}
+%\floatstyle{boxed} 
 %\restylefloat{figure}
 
-%for drawing graphics
+%for drawing graphics		
 \usepackage{tikz}
 \usetikzlibrary{shapes, backgrounds,mindmap, trees}
 
 
 %----------------------------------------------------------------------------------------
 %	Color DEFINITIONS
-%----------------------------------------------------------------------------------------
+%---------------------------------------------------------------------------------------- 
 \usepackage{transparent}
 \usepackage{color}
 
@@ -223,16 +223,16 @@
     \vspace{6pt}
     \begin{center}
         \linespread{2}{
-            \selectfont\textcolor{white}{\fontsize{25}{25}{{#1}}}\\
-            \normalsize
-            \parbox{0.7\mpwidth}{\textcolor{white}}}}{
+    \selectfont\textcolor{white}{\fontsize{25}{25}{{#1}}}\\
+        \normalsize
+        \parbox{0.7\mpwidth}{\textcolor{white}}}}{
     \end{center}}
 
 %----------------------------------------------------------------------------------------
 %	 CV EVENT
 %----------------------------------------------------------------------------------------
 
-% creates a stretched box as cv entry headline followed by some paragraphs about
+% creates a stretched box as cv entry headline followed by some paragraphs about 
 % the work you did
 % param 1:	event time i.e. 2014 or 2011-2014 etc.
 % param 2:	event name (what did you do?)
@@ -265,7 +265,7 @@
     }
 }
 
-% creates a stretched box as
+% creates a stretched box as 
 \newcommand{\cveventmeta}[2]
 {
     \mbox{\mystrut \hspace{87pt}\textit{#1}}\\
@@ -291,7 +291,7 @@
 
 %----------------------------------------------------------------------------------------
 %	ICON-SET EMBEDDING
-%----------------------------------------------------------------------------------------
+%---------------------------------------------------------------------------------------- 
 
 % at this point we simplify our icon-embedding by simply referring to a set of png images.
 % if you find a good way of including svg without conflicting with other packages you can
@@ -320,89 +320,89 @@
 %============================================================================%
 \begin{document}
 
-    \fcolorbox{white}{sectcol}{\begin{minipage}[c] [0.95\textheight][t]{0.27\linewidth}
-    \vspace{30pt}
-    \begin{metasection_title}
-    {\bfseries Florian GUYOT}
-    \end{metasection_title}
+\fcolorbox{white}{sectcol}{\begin{minipage}[c] [0.95\textheight][t]{0.27\linewidth}
+\vspace{30pt}
+\begin{metasection_title}
+{\bfseries Florian GUYOT}
+\end{metasection_title}
 
 
-    \begin{metasection}{Contact}
+\begin{metasection}{Contact}
 
-        \icontext{MapMarker}{12}{92160 Antony}{white}\\[6pt]
-        \icontext{MobilePhone}{12}{06 51 21 25 01}{white}\\[6pt]
-        \iconemail{Send}{12}{axelflorian@free.fr}{axelflorian@free.fr}{white}\\[6pt]
-        \iconhref{Github}{12}{https://github.com/florianguyot91}{https://github.com/florianguyot91}{white}\\[6pt]
+    \icontext{MapMarker}{12}{92160 Antony}{white}\\[6pt]
+    \icontext{MobilePhone}{12}{06 51 21 25 01}{white}\\[6pt]
+    \iconemail{Send}{12}{axelflorian@free.fr}{axelflorian@free.fr}{white}\\[6pt]
+    \iconhref{Github}{12}{https://github.com/florianguyot91}{https://github.com/florianguyot91}{white}\\[6pt]
 
-    \end{metasection}
+\end{metasection}
 
 %----------------------------------------------------------------------------------------
 %	META SECTION
 %----------------------------------------------------------------------------------------
 
-    \begin{metasection}{Compétences}
+\begin{metasection}{Compétences}
 
-        \icontext{}{-12}{Prise d'initiative et leadership}{white}\\[6pt]
-        \icontext{}{-12}{BAFA}{white}\\[6pt]
-        \icontext{}{-12}{Esprit de synthèse}{white}\\[6pt]
+    \icontext{}{-12}{Prise d'initiative et leadership}{white}\\[6pt]
+    \icontext{}{-12}{BAFA}{white}\\[6pt]
+    \icontext{}{-12}{Esprit de synthèse}{white}\\[6pt]
 
-    \end{metasection}
-
-
-    \begin{metasection}{Langues}
-
-        \textcolor{white}{
-            \icontext{}{-12}{Anglais C1 (TOEIC 945)}{white} \\[6pt]
-            \icontext{}{-12}{Espagnol B1}{white} \\[6pt]
-            \icontext{}{-12}{Japonais A2}{white} \\[6pt]
-        }
-    \end{metasection}
+\end{metasection}
 
 
-    \begin{metasection}{Technologies}
+\begin{metasection}{Langues}
 
-        \textcolor{white}{
-            \icontext{}{-12}{Intelligence Artificielle}{white} \\[6pt]
-            \icontext{}{-12}{Informatique quantique}{white} \\[6pt]
-            \icontext{}{-12}{UNIX/Linux}{white} \\[6pt]
-            \icontext{}{-12}{Git}{white} \\[6pt]
-        }
-    \end{metasection}
+    \textcolor{white}{
+        \icontext{}{-12}{Anglais C1 (TOEIC 945)}{white} \\[6pt]
+        \icontext{}{-12}{Espagnol B1}{white} \\[6pt]
+        \icontext{}{-12}{Japonais A2}{white} \\[6pt]
+    }
+\end{metasection}
 
-    \begin{metasection}{Logiciels}
 
-        \textcolor{white}{
-            \icontext{}{-12}{JetBrains IDE's}{white}\\[6pt]
-            \icontext{}{-12}{VSCode}{white}\\[6pt]
-            \icontext{}{-12}{MATLAB}{white}\\[6pt]
-            \icontext{}{-12}{CATIA V5}{white}\\[6pt]
-            \icontext{}{-12}{IBM Quantum}{white}\\[6pt]
-        }
-    \end{metasection}
+\begin{metasection}{Technologies}
 
-    \begin{metasection}{Activités}
+    \textcolor{white}{
+        \icontext{}{-12}{Intelligence Artificielle}{white} \\[6pt]
+        \icontext{}{-12}{Informatique quantique}{white} \\[6pt]
+        \icontext{}{-12}{UNIX/Linux}{white} \\[6pt]
+        \icontext{}{-12}{Git}{white} \\[6pt]
+    }
+\end{metasection}
 
-        \textcolor{white}{
-            \icontext{}{-12}{Conception 3D (Blender)}{white}\\[6pt]
-            \icontext{}{-12}{Montage vidéo (DaVinci)}{white}\\[6pt]
-            \icontext{}{-12}{Guitare}{white}\\[6pt]
-            \icontext{}{-12}{Piano}{white}\\[6pt]
-            \icontext{}{-12}{Plongée}{white}\\[6pt]
-        }
-    \end{metasection}
+\begin{metasection}{Logiciels}
+
+    \textcolor{white}{
+        \icontext{}{-12}{JetBrains IDE's}{white}\\[6pt]
+        \icontext{}{-12}{VSCode}{white}\\[6pt]
+        \icontext{}{-12}{MATLAB}{white}\\[6pt]
+        \icontext{}{-12}{CATIA V5}{white}\\[6pt]
+        \icontext{}{-12}{IBM Quantum}{white}\\[6pt]
+    }
+\end{metasection}
+
+\begin{metasection}{Activités}
+
+    \textcolor{white}{
+    \icontext{}{-12}{Conception 3D (Blender)}{white}\\[6pt]
+    \icontext{}{-12}{Montage vidéo (DaVinci)}{white}\\[6pt]
+    \icontext{}{-12}{Guitare}{white}\\[6pt]
+    \icontext{}{-12}{Piano}{white}\\[6pt]
+    \icontext{}{-12}{Plongée}{white}\\[6pt]
+    }
+\end{metasection}
 
 
 %---------------------------------------------------------------------------------------
 %	QR CODE (optional)
 %----------------------------------------------------------------------------------------
 
-    \vspace{12pt}
+\vspace{12pt}
 %\begin{center}
 %\includegraphics[width=0.35\mpwidth]{qrcode}
 %\end{center}
 
-    \end{minipage}}
-    \fcolorbox{white}{white}{\begin{minipage}[c][0.95\textheight][t]{0.69\linewidth}
+                                 \end{minipage}}
+\fcolorbox{white}{white}{\begin{minipage}[c][0.95\textheight][t]{0.69\linewidth}
 
 
 %---------------------------------------------------------------------------------------
@@ -446,35 +446,35 @@
 %---------------------------------------------------------------------------------------
 %	STATUS
 %----------------------------------------------------------------------------------------
-    \vspace{20pt}
-    \fontsize{15}{15}
-    \centering{\bfseries ÉTUDIANT EN 4 ÈME ANNÉE A L'EPF
+\vspace{20pt}
+\fontsize{15}{15}
+\centering{\bfseries ÉTUDIANT EN 4 ÈME ANNÉE A L'EPF
 
 
-    MAJEURE INGÉNIERIE ET NUMÉRIQUE
-    }
+MAJEURE INGÉNIERIE ET NUMÉRIQUE
+}
 
-    \vspace{25pt}
+                                 \vspace{25pt}
 
 %---------------------------------------------------------------------------------------
 %	EXPERIENCE
 %----------------------------------------------------------------------------------------
-    \cvsection{Expérience professionnelle}
+                                 \cvsection{Expérience professionnelle}
 
 %
-    \cvevent{09/2022-01/2023}
-    {Stage élève ingénieur}
-    {Fraunhofer ISI}
-    { Développement du back end d'une application web mandatée par la Commission Européenne \newline\hspace*{4mm}en collaboration avec différents instituts (MICAT) :
-    \newline
-    \hspace*{4mm}- Pandas pour la gestion de dataframe et de lecture de JSON
-    \newline
-    \hspace*{4mm}- Numpy pour les opérations économiques
-    \newline
-    \hspace*{4mm}- Flask pour la communication entre le back et le front end
-    \newline
-    \hspace*{4mm}- Collaboration avec Git
-    }
+                                 \cvevent{09/2022-01/2023}
+                                 {Stage élève ingénieur}
+                                 {Fraunhofer ISI}
+                                 { Développement du back end d'une application web mandatée par la Commission Européenne \newline\hspace*{4mm}en collaboration avec différents instituts (MICAT) :
+                                 \newline
+                                 \hspace*{4mm}- Pandas pour la gestion de dataframe et de lecture de JSON
+                                 \newline
+                                 \hspace*{4mm}- Numpy pour les opérations économiques
+                                 \newline
+                                 \hspace*{4mm}- Flask pour la communication entre le back et le front end
+                                 \newline
+                                 \hspace*{4mm}- Collaboration avec Git
+                                 }
 
 %\textcolor{softcol}{\hrule}
 
@@ -485,62 +485,62 @@
 %\textcolor{softcol}{\hrule}
 
 
-    \cvevent{08/2021}
-    {Stage engagement citoyen}
-    {Zen 2050 Maintenant}
-    {Conception sous WordPress et mise en ligne du site web de l’association }
+                                 \cvevent{08/2021}
+                                 {Stage engagement citoyen}
+                                 {Zen 2050 Maintenant}
+                                 {Conception sous WordPress et mise en ligne du site web de l’association }
 
 %\textcolor{softcol}{\hrule}
 
 %
-    \cvevent{03/2021-07/2021}
-    {CDD Assistant technicien}
-    {Praxea-Diagnostics}
-    {Découpe et préparation d'échantillons organiques pour le diagnostic médical}
+                                 \cvevent{03/2021-07/2021}
+                                 {CDD Assistant technicien}
+                                 {Praxea-Diagnostics}
+                                 {Découpe et préparation d'échantillons organiques pour le diagnostic médical}
 
 %\textcolor{softcol}{\hrule}
 
 
 %
-    \cvevent{07/2019}
-    {Stage ouvrier}
-    {GEORGIN}
-    {Montage de composants électroniques sur des cartes{,} (soudures{,} assemblage{,} moulage), Contrôle qualité du produit final}
+                                 \cvevent{07/2019}
+                                 {Stage ouvrier}
+                                 {GEORGIN}
+                                 {Montage de composants électroniques sur des cartes{,} (soudures{,} assemblage{,} moulage), Contrôle qualité du produit final}
 
-    \vspace{25pt}
+                                    \vspace{25pt}
 %---------------------------------------------------------------------------------------
 %	EDUCATION SECTION
 %--------------------------------------------------------------------------------------
-    \cvsection{Projets - Diplômes}
+                                 \cvsection{Projets - Diplômes}
 
-    \cvevent{2018-2024}
-    {Ecole d’ingénieur généraliste}
-    {EPF de Cachan}
-    {Développement d'une application mobile en Kotlin depuis l'API The Movie Database pour :
-    \newline
-    \hspace*{4mm}- Rechercher les films les plus populaires
-    \newline
-    \hspace*{4mm}- Créer un compte pour les mettre en favoris
-    \newline
-    \hspace*{4mm}- Scanner des QRcodes pour accéder aux détails d'un film,
-        Conception d'une IA en Python (Tensorflow keras) pour génerer des maps dans un jeu de \hspace*{4mm}rythme (Osu!),
-        Création d'un site en JAVA de gestion d'une flotte de voitures associée à une base clients \hspace*{4mm} et réservations,
-        Développement d'un site web en JS/PHP de prise de rendez-vous et gestion clients d'un \hspace*{4mm} cabinet médical,
-        Création d’une application web d'un jeu de mémoire (front end{,} back end),
-        Gestion de bases de données en SQL avec UML,
-        Design de circuits quantiques (Addition{,} ect),
-        Approximations d'intégrales sous MATLAB,
-        Modélisation et simulation de contraintes d’un vérin hydraulique en 3D avec CATIA V5,
-        Analyse comparée des flux thermiques dans une ailette de refroidissement{,} entre un modèle \hspace*{4mm}physique et une simulation sous MATLAB/COMSOL,
-        Création d'un prototype de borne de stationnement de voitures en ARDUINO et gestion \hspace*{4mm} d'autorisation depuis une page web,
-        Programmation d’un Raspberry pour commander une voiture et la contrôler à distance
-    }
+                                 \cvevent{2018-2024}
+                                 {Ecole d’ingénieur généraliste}
+                                 {EPF de Cachan}
+                                 {Développement d'une application mobile en Kotlin depuis l'API The Movie Database pour :
+                                     \newline
+                                     \hspace*{4mm}- Rechercher les films les plus populaires
+                                     \newline
+                                     \hspace*{4mm}- Créer un compte pour les mettre en favoris
+                                     \newline
+                                     \hspace*{4mm}- Scanner des QRcodes pour accéder aux détails d'un film,
+                                     Conception d'une IA en Python (Tensorflow keras) pour génerer des maps dans un jeu de \hspace*{4mm}rythme (Osu!),
+                                     Création d'un site en JAVA de gestion d'une flotte de voitures associée à une base clients \hspace*{4mm} et réservations,
+                                     Développement d'un site web en JS/PHP de prise de rendez-vous et gestion clients d'un \hspace*{4mm} cabinet médical,
+                                     Création d’une application web d'un jeu de mémoire (front end{,} back end),
+                                     Gestion de bases de données en SQL avec UML,
+                                     Design de circuits quantiques (Addition{,} ect),
+                                     Approximations d'intégrales sous MATLAB,
+                                     Modélisation et simulation de contraintes d’un vérin hydraulique en 3D avec CATIA V5,
+                                     Analyse comparée des flux thermiques dans une ailette de refroidissement{,} entre un modèle \hspace*{4mm}physique et une simulation sous MATLAB/COMSOL,
+                                     Création d'un prototype de borne de stationnement de voitures en ARDUINO et gestion \hspace*{4mm} d'autorisation depuis une page web,
+                                     Programmation d’un Raspberry pour commander une voiture et la contrôler à distance
+                                 }
 
-    \cvevent{2018}
-    {Lycée Saint-Charles}
-    {Athis-Mons}
-    {Bac S option Informatique et Science du Numérique,
-        Développement d'un jeu d'arène avec "path finding"}
+                                 \cvevent{2018}
+                                 {Lycée Saint-Charles}
+                                 {Athis-Mons}
+                                 {Bac S option Informatique et Science du Numérique,
+                                     Développement d'un jeu d'arène avec "path finding"}
 
 
 
@@ -563,7 +563,7 @@
     \end{minipage}}%
 
 %-------------------------------------------------------------------------------------------------
-%	ARTIFICIAL FOOTER (fancy footer cannot exceed linewidth)
+%	ARTIFICIAL FOOTER (fancy footer cannot exceed linewidth) 
 %--------------------------------------------------------------------------------------------------
 
 %\null
